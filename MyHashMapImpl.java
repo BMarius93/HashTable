@@ -7,7 +7,7 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 	ArrayList<BucketImpl> buckets = new ArrayList<BucketImpl>();
 
 	public MyHashMapImpl(int nUM_BUCKETS) {
-		// TODO Auto-generated constructor stub
+		
 		this.buckets = new ArrayList<BucketImpl>();
 		for(int i = 0 ; i < nUM_BUCKETS; i++){
 			BucketImpl element = new BucketImpl();
@@ -20,7 +20,7 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 
 	@Override
 	public V get(K key) {
-		// TODO Auto-generated method stub
+		
 		
 		int bucketIndex = Math.abs(key.hashCode()) % buckets.size();
 		
@@ -55,7 +55,7 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 		
 		entries.add(e);
 		
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
@@ -74,13 +74,13 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 				
 			}
 		}
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
+		
 		int size = 0;
 		for(BucketImpl bucket : buckets){
 			size += bucket.entries.size();
@@ -90,7 +90,7 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 
 	@Override
 	public List<? extends MyHashMap.Bucket<K, V>> getBuckets() {
-		// TODO Auto-generated method stub
+		
 		return this.buckets;
 	}
 	
@@ -108,13 +108,13 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 		
 		@Override
 		public K getKey() {
-			// TODO Auto-generated method stub
+			
 			return key;
 		}
 
 		@Override
 		public V getValue() {
-			// TODO Auto-generated method stub
+			
 			return value;
 		}
 		
@@ -127,7 +127,7 @@ public class MyHashMapImpl<K, V> implements MyHashMap<K, V>{
 		@Override
 		public List<? extends MyHashMap.Entry<K, V>> getEntries() {
 			
-			// TODO Auto-generated method stub
+			
 			return this.entries;
 		}
 		
